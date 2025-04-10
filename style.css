@@ -1,4 +1,4 @@
-/* Advanced Resume Site Styles */
+/* Advanced Resume Site Styles + Auto-Scrolling Skills Carousel */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
@@ -104,35 +104,39 @@ h2 {
   left: 0;
 }
 
-.skills-rings {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  text-align: center;
-}
-
-.ring {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: conic-gradient(#00b4d8 var(--percent), #e0e0e0 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #0077b6;
-  font-size: 0.9rem;
+.carousel {
+  overflow: hidden;
+  width: 100%;
   position: relative;
+  height: 50px;
+  margin-top: 1rem;
 }
 
-.ring::before {
-  content: attr(data-percent) '%';
-  position: absolute;
-  font-size: 0.8rem;
-  top: 80%;
-  left: 50%;
-  transform: translateX(-50%);
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  animation: scrollSkills 20s linear infinite;
+  white-space: nowrap;
+}
+
+.carousel-track span {
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  background: #caf0f8;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-track span:hover {
+  transform: scale(1.2);
+  background: #ade8f4;
+}
+
+@keyframes scrollSkills {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .flip-cards, .startup-card {
