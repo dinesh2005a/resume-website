@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harsha Malla - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
+  <div class="floating-background"></div>
+  <header data-aos="fade-down">
     <h1 id="easter-egg">Harsha Malla</h1>
     <p class="tagline"><span id="typing"></span></p>
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -32,7 +34,7 @@
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>👨‍🚀 About Me</h2>
       <div class="video-intro">
         <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Intro Video" frameborder="0" allowfullscreen></iframe>
@@ -40,7 +42,7 @@
       <p>I'm Harsha Malla, a startup enthusiast and CA Inter student at IIM Bangalore. I thrive at the intersection of business, innovation, and curiosity.</p>
     </section>
 
-    <section id="education">
+    <section id="education" data-aos="fade-right">
       <h2>🎓 Education Timeline</h2>
       <ul class="timeline">
         <li><strong>2024–2027:</strong> IIM Bangalore – BBA in Digital Business & Entrepreneurship</li>
@@ -52,18 +54,18 @@
       </ul>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="zoom-in">
       <h2>🛠️ Skills</h2>
-      <div class="skills-bars">
-        <div><span>Accounting</span><div class="bar"><div style="width: 90%"></div></div></div>
-        <div><span>Taxation</span><div class="bar"><div style="width: 85%"></div></div></div>
-        <div><span>Costing</span><div class="bar"><div style="width: 80%"></div></div></div>
-        <div><span>Web Development</span><div class="bar"><div style="width: 75%"></div></div></div>
-        <div><span>Digital Marketing</span><div class="bar"><div style="width: 70%"></div></div></div>
+      <div class="skills-rings">
+        <div class="ring" data-percent="90">Accounting</div>
+        <div class="ring" data-percent="85">Taxation</div>
+        <div class="ring" data-percent="80">Costing</div>
+        <div class="ring" data-percent="75">Web Dev</div>
+        <div class="ring" data-percent="70">Marketing</div>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-left">
       <h2>💻 Projects</h2>
       <ul>
         <li>Resume Website</li>
@@ -71,7 +73,7 @@
       </ul>
     </section>
 
-    <section id="achievements">
+    <section id="achievements" data-aos="flip-up">
       <h2>🏆 Achievements</h2>
       <div class="flip-cards">
         <div class="card">Nova 2024 Winner (IIM B)</div>
@@ -80,7 +82,7 @@
       </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" data-aos="fade-up-right">
       <h2>📜 Certifications</h2>
       <ul>
         <li>Smart Mobility Challenge – IIM Calcutta (Participation)</li>
@@ -89,13 +91,11 @@
       <ul>
         <li>English – Fluent</li>
         <li>Hindi – Fluent</li>
-        <li>Telugu – Fluent</li>
-        <li>Hindi – Intermediate</li>
         <li>Kannada – Learning</li>
       </ul>
     </section>
 
-    <section id="whyme">
+    <section id="whyme" data-aos="fade-up-left">
       <h2>🌟 Why Me?</h2>
       <ul>
         <li>🚀 Passionate about innovation & execution</li>
@@ -105,18 +105,18 @@
       </ul>
     </section>
 
-    <section id="thoughts">
+    <section id="thoughts" data-aos="fade">
       <h2>🧠 Thoughts This Week</h2>
       <p><em>“Filing ITRs is like solving puzzles with real-world impact.”</em></p>
     </section>
 
-    <section id="startups">
+    <section id="startups" data-aos="zoom-in-up">
       <h2>🚀 Startup Ideas</h2>
       <div class="startup-card">Zero Budget Startup Generator</div>
       <div class="startup-card">ITR Filing Support for Students</div>
     </section>
 
-    <section id="stats">
+    <section id="stats" data-aos="zoom-out">
       <h2>📊 Fun Stats</h2>
       <div class="counters">
         <div><span id="counter1">142</span><p>Cups of Coffee</p></div>
@@ -125,7 +125,7 @@
       </div>
     </section>
 
-    <section id="chatbot">
+    <section id="chatbot" data-aos="fade-in">
       <h2>🤖 Ask Harsha (Chatbot)</h2>
       <div class="chatbox">
         <p>User: What's your dream startup?</p>
@@ -133,7 +133,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>📬 Contact</h2>
       <p>Email: <a href="mailto:mallaharsha2006@gmail.com">mallaharsha2006@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/harsha-malla">linkedin.com/in/harsha-malla</a></p>
@@ -144,7 +144,10 @@
     <p>© 2025 Harsha Malla | Made with 💙 from Rayagada</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
+
     const text = "Startup Enthusiast | IIM Bangalore | Pursuing CA Inter";
     let i = 0;
     function type() {
@@ -157,7 +160,8 @@
     type();
 
     document.getElementById("easter-egg").addEventListener("click", () => {
-      alert("Hey curious mind! You found an Easter Egg 🐣");
+      document.body.classList.toggle("console-mode");
+      setTimeout(() => document.body.classList.remove("console-mode"), 8000);
     });
   </script>
 </body>
