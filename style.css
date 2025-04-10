@@ -1,4 +1,6 @@
-/* Softer Futuristic Resume Site CSS */
+/* Fun & Animated Resume Site CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -8,136 +10,128 @@
 }
 
 body {
-  background-color: #121212;
-  color: #e0f7fa;
-  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #ffefd5, #ffe4e1);
+  color: #333;
+  font-family: 'Comic Neue', cursive;
   line-height: 1.6;
   padding: 20px;
-  position: relative;
-  z-index: 1;
 }
 
 #particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-}
-
-header, section, footer {
-  position: relative;
-  z-index: 1;
+  display: none; /* Disable particles for a lighter look */
 }
 
 header {
   text-align: center;
   padding: 40px 10px;
-  background: rgba(18, 18, 18, 0.85);
-  border-bottom: 2px solid #80deea;
-  box-shadow: 0 0 10px #80deea;
+  background-color: #ffb6c1;
+  border-bottom: 5px dashed #ff69b4;
+  animation: popFade 2s ease-in-out;
+}
+
+@keyframes popFade {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 h1.typewriter {
   font-size: 2.5rem;
-  overflow: hidden;
-  border-right: .15em solid #80deea;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+  color: #e60073;
+  text-shadow: 2px 2px #fff;
+  animation: bounce 1.5s infinite;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent }
-  50% { border-color: #80deea; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-top: 10px;
   flex-wrap: wrap;
 }
 
 nav ul li a {
-  color: #e0f7fa;
+  background-color: #ff69b4;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 12px;
-  border: 1px solid transparent;
+  padding: 10px 14px;
   border-radius: 8px;
   transition: all 0.3s ease;
+  border: 2px dashed transparent;
 }
 
 nav ul li a:hover {
-  background-color: #80deea;
-  color: #121212;
-  border: 1px solid #80deea;
-  box-shadow: 0 0 10px #80deea;
+  background-color: #fff;
+  color: #ff69b4;
+  border: 2px dashed #ff69b4;
 }
 
 section {
-  margin: 40px 0;
-  padding: 25px;
-  background-color: rgba(28, 28, 28, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(128, 222, 234, 0.2);
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff8dc;
+  border-radius: 20px;
+  border: 3px dotted #ffa07a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: floatIn 1s ease;
+}
+
+@keyframes floatIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   list-style: none;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .skills-list li {
-  padding: 10px 16px;
-  border: 1px solid #80deea;
-  border-radius: 10px;
-  background-color: #1e1e1e;
-  transition: all 0.3s ease;
-  color: #e0f7fa;
+  background-color: #ffdab9;
+  color: #333;
+  padding: 8px 12px;
+  border: 2px solid #f08080;
+  border-radius: 12px;
+  transition: all 0.2s ease;
 }
 
 .skills-list li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px #80deea;
-  background-color: #80deea;
-  color: #121212;
+  transform: rotate(-2deg) scale(1.1);
+  background-color: #fff0f5;
+  border-color: #ff69b4;
 }
 
 .card {
-  background-color: #1c1c1c;
-  border-left: 4px solid #80deea;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 15px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #e0f7fa;
+  background-color: #ffe4b5;
+  border-left: 5px solid #ff69b4;
+  padding: 18px;
+  border-radius: 16px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 12px #80deea;
+  transform: scale(1.02) rotate(1deg);
+  box-shadow: 0 0 10px #ff69b4;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  color: #aaa;
+  margin-top: 30px;
+  padding: 15px;
   font-size: 0.9rem;
-  border-top: 1px solid #80deea;
-  margin-top: 40px;
+  color: #666;
+  background-color: #ffe4e1;
+  border-top: 2px dashed #ff69b4;
 }
 
 @media (max-width: 768px) {
@@ -150,19 +144,12 @@ footer {
   }
   .skills-list {
     flex-direction: column;
-    align-items: flex-start;
-  }
-  .card {
-    padding: 15px;
   }
 }
 
 @media (max-width: 480px) {
   body {
     padding: 10px;
-  }
-  nav ul li a {
-    font-size: 14px;
   }
   section {
     padding: 15px;
