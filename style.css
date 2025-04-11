@@ -185,7 +185,7 @@ h2 {
 
 .counters div {
   font-size: 1.2rem;
-  animation: countUp 1.5s ease-in-out;
+  animation: countUp 10s ease-in-out;
 }
 
 @keyframes countUp {
