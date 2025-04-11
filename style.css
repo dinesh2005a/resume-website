@@ -122,7 +122,7 @@ h2 {
 
 .skills-scroll-track {
   display: inline-block;
-  animation: scroll-left 1s linear infinite;
+  animation: scroll-left 10s linear infinite;
 }
 
 .skills-scroll-track:hover {
@@ -185,7 +185,7 @@ h2 {
 
 .counters div {
   font-size: 1.2rem;
-  animation: countUp 10s ease-in-out;
+  animation: countUp 1.5s ease-in-out;
 }
 
 @keyframes countUp {
