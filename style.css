@@ -234,18 +234,21 @@ footer {
     height: 200px;
   }
 }
-/* Skills Horizontal Scroll Animation */
+/* Skills scroll */
 .skills-scroll-container {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
   width: 100%;
-  padding: 10px 0;
+  border: 2px solid #0a4d68;
+  border-radius: 10px;
+  background-color: #e6f7ff;
+  padding: 1rem 0;
 }
 
 .skills-scroll-track {
   display: inline-block;
-  animation: scroll-left-right 20s linear infinite;
+  animation: scroll-left 20s linear infinite;
 }
 
 .skills-scroll-track:hover {
@@ -254,12 +257,12 @@ footer {
 
 .skills-scroll-track span {
   display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.1rem;
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  color: #0a4d68;
 }
 
-/* Animation keyframes */
-@keyframes scroll-left-right {
+@keyframes scroll-left {
   0% {
     transform: translateX(100%);
   }
