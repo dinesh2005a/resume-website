@@ -1,10 +1,10 @@
-/* Advanced Resume Site Styles + Auto-Scrolling Skills Carousel */
-
+/* === Global Styles === */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
 body {
   font-family: 'Fredoka', sans-serif;
   margin: 0;
+  padding: 0;
   background-color: #f0f4f8;
   color: #222;
   transition: background 0.5s ease, color 0.5s ease;
@@ -104,39 +104,41 @@ h2 {
   left: 0;
 }
 
-.carousel {
+.skills-scroll-container {
   overflow: hidden;
-  width: 100%;
+  white-space: nowrap;
   position: relative;
-  height: 50px;
+  width: 100%;
+  border: 2px solid #0a4d68;
+  border-radius: 10px;
+  background-color: #e6f7ff;
+  padding: 1rem 0;
   margin-top: 1rem;
 }
 
-.carousel-track {
-  display: flex;
-  gap: 2rem;
-  animation: scrollSkills 20s linear infinite;
-  white-space: nowrap;
-}
-
-.carousel-track span {
+.skills-scroll-track {
   display: inline-block;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  background: #caf0f8;
-  border-radius: 10px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  animation: scroll-left 20s linear infinite;
 }
 
-.carousel-track span:hover {
-  transform: scale(1.2);
-  background: #ade8f4;
+.skills-scroll-track:hover {
+  animation-play-state: paused;
 }
 
-@keyframes scrollSkills {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.skills-scroll-track span {
+  display: inline-block;
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  color: #0a4d68;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .flip-cards, .startup-card {
@@ -225,6 +227,11 @@ footer {
     flex-direction: column;
   }
 
+  .skills-scroll-track span {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+
   .skills-rings, .counters, .flip-cards {
     flex-direction: column;
     align-items: center;
@@ -232,41 +239,5 @@ footer {
 
   .video-intro iframe {
     height: 200px;
-  }
-}
-/* Skills scroll */
-.skills-scroll-container {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-  border: 2px solid #0a4d68;
-  border-radius: 10px;
-  background-color: #e6f7ff;
-  padding: 1rem 0;
-}
-
-.skills-scroll-track {
-  display: inline-block;
-  animation: scroll-left 20s linear infinite;
-}
-
-.skills-scroll-track:hover {
-  animation-play-state: paused;
-}
-
-.skills-scroll-track span {
-  display: inline-block;
-  margin: 0 2rem;
-  font-size: 1.2rem;
-  color: #0a4d68;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
