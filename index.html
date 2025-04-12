@@ -16,21 +16,22 @@
     <h1 id="easter-egg">Harsha Malla</h1>
     <p class="tagline"><span id="typing"></span></p>
     <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#whyme">Why Me?</a></li>
-        <li><a href="#thoughts">Thoughts</a></li>
-        <li><a href="#startups">Startups</a></li>
-        <li><a href="#stats">Stats</a></li>
-        <li><a href="#chatbot">Chatbot</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#whyme">Why Me?</a></li>
+    <li><a href="#thoughts">Thoughts</a></li>
+    <li><a href="#startups">Startups</a></li>
+    <li><a href="#stats">Stats</a></li>
+    <li><a href="#chatbot">Chatbot</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   </header>
 
   <main>
@@ -168,6 +169,10 @@
     document.getElementById("easter-egg").addEventListener("click", () => {
       document.body.classList.toggle("console-mode");
       setTimeout(() => document.body.classList.remove("console-mode"), 8000);
+      function toggleMenu() {
+    const menu = document.getElementById('nav-links');
+    menu.classList.toggle('show');
+  }
     });
   </script>
 </body>
