@@ -50,10 +50,22 @@ nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+nav ul::-webkit-scrollbar {
+  display: none;
+}
+
+nav li {
+  display: inline-block;
 }
 
 nav li a {
@@ -61,17 +73,18 @@ nav li a {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 999px;
   transition: all 0.3s ease;
   display: inline-block;
+  font-size: 0.9rem;
   box-shadow: 0 2px 6px rgba(0, 119, 182, 0.3);
 }
 
 nav li a:hover {
   transform: scale(1.05);
   background-color: #00b4d8;
-  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.5);
 }
+
 
 /* Layout */
 main {
