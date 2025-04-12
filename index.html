@@ -3,107 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harsha Malla - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Additional inline mobile-first styles */
-    body {
-      margin: 0;
-      font-family: 'Fredoka', sans-serif;
-      line-height: 1.6;
-    }
-
-    header h1, h2 {
-      text-align: center;
-    }
-
-    nav.navbar ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-      list-style: none;
-    }
-
-    nav.navbar ul li {
-      margin: 5px 10px;
-    }
-
-    iframe {
-      max-width: 100%;
-      height: auto;
-      aspect-ratio: 16/9;
-    }
-
-    .skills-scroll-container {
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 10px 0;
-    }
-
-    .skills-scroll-track span {
-      display: inline-block;
-      margin-right: 15px;
-      font-weight: 600;
-    }
-
-    .flip-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .flip-cards .card {
-      background: #f0f0f0;
-      padding: 10px 15px;
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .startup-card {
-      background: #e9f5ff;
-      margin: 10px auto;
-      padding: 12px 18px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 320px;
-    }
-
-    .counters {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    .counters div {
-      margin: 10px;
-      text-align: center;
-      min-width: 100px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      background: #fafafa;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .tagline {
-        font-size: 0.9em;
-        padding: 0 15px;
-        text-align: center;
-      }
-      nav.navbar ul li {
-        font-size: 0.9em;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -130,7 +34,117 @@
   </header>
 
   <main>
-    <!-- All your sections remain the same... I only added styling above to make them responsive -->
+    <section id="about" data-aos="fade-up">
+      <h2>👨‍🚀 About Me</h2>
+      <div class="video-intro">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Intro Video" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p>I'm Harsha Malla, a startup enthusiast and CA Inter student at IIM Bangalore. I thrive at the intersection of business, innovation, and curiosity.</p>
+    </section>
+
+    <section id="education" data-aos="fade-right">
+      <h2>🎓 Education Timeline</h2>
+      <ul class="timeline">
+        <li><strong>2024–2027:</strong> IIM Bangalore – BBA in Digital Business & Entrepreneurship</li>
+        <li><strong>2024–Present:</strong> CA Inter Student (Cleared Foundation in June 2024)</li>
+        <li><strong>2025:</strong> CMA Foundation (Completed Jan 2025)</li>
+        <li><strong>2025:</strong> Cleared ACET – Institute of Actuaries of India</li>
+        <li><strong>2022–2024:</strong> Sri Chaitanya College (12th – 2nd position locally)</li>
+        <li><strong>2015–2022:</strong> CISCE – High School</li>
+      </ul>
+    </section>
+
+    <section id="skills" data-aos="zoom-in">
+      <h2>🛠️ Skills</h2>
+      <div class="skills-scroll-container">
+        <div class="skills-scroll-track">
+          <span>📊 Accounting</span>
+          <span>💰 Taxation</span>
+          <span>📦 Costing</span>
+          <span>💻 Web Dev</span>
+          <span>📈 Financial Management</span>
+          <span>📣 Marketing</span>
+          <span>🧠 Business Strategy</span>
+          <span>🚀 Startup Ideation</span>
+          <span>📊 Accounting</span>
+          <span>💰 Taxation</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-left">
+      <h2>💻 Projects</h2>
+      <ul>
+        <li>Resume Website</li>
+        <li>Zero-Budget ITR Filing Platform</li>
+      </ul>
+    </section>
+
+    <section id="achievements" data-aos="flip-up">
+      <h2>🏆 Achievements</h2>
+      <div class="flip-cards">
+        <div class="card">Nova 2024 Winner (IIM B)</div>
+        <div class="card">President – Hospitality Club</div>
+        <div class="card">97 in Business Studies, 95 in Accountancy</div>
+      </div>
+    </section>
+
+    <section id="certifications" data-aos="fade-up-right">
+      <h2>📜 Certifications</h2>
+      <ul>
+        <li>Smart Mobility Challenge – IIM Calcutta (Participation)</li>
+      </ul>
+      <h3>🌍 Languages</h3>
+      <ul>
+        <li>English – Fluent</li>
+        <li>Hindi – Fluent</li>
+        <li>Kannada – Learning</li>
+      </ul>
+    </section>
+
+    <section id="whyme" data-aos="fade-up-left">
+      <h2>🌟 Why Me?</h2>
+      <ul>
+        <li>🚀 Passionate about innovation & execution</li>
+        <li>🎯 Consistent academic performer</li>
+        <li>🧠 Cross-disciplinary thinker (CA + IIM + Coding)</li>
+        <li>📈 Startup & finance obsessed</li>
+      </ul>
+    </section>
+
+    <section id="thoughts" data-aos="fade">
+      <h2>🧠 Thoughts This Week</h2>
+      <p><em>“Filing ITRs is like solving puzzles with real-world impact.”</em></p>
+    </section>
+
+    <section id="startups" data-aos="zoom-in-up">
+      <h2>🚀 Startup Ideas</h2>
+      <div class="startup-card">Zero Budget Startup Generator</div>
+      <div class="startup-card">ITR Filing Support for Students</div>
+    </section>
+
+    <section id="stats" data-aos="zoom-out">
+      <h2>📊 Fun Stats</h2>
+      <div class="counters">
+        <div><span id="counter1">142</span><p>Cups of Coffee</p></div>
+        <div><span id="counter2">47</span><p>Startup Ideas Scribbled</p></div>
+        <div><span id="counter3">66</span><p>Hours Spent Coding</p></div>
+      </div>
+    </section>
+
+    <section id="chatbot" data-aos="fade-in">
+      <h2>🤖 Ask Harsha (Chatbot)</h2>
+      <div class="chatbox">
+        <p>User: What's your dream startup?</p>
+        <p>Harsha: Something that empowers the common man to be financially independent 🪙</p>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:mallaharsha2006@gmail.com">mallaharsha2006@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/harsha-malla">linkedin.com/in/harsha-malla</a></p>
+    </section>
   </main>
 
   <footer>
