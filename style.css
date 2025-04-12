@@ -135,7 +135,7 @@ h2 {
 
 .skills-scroll-track {
   display: inline-block;
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-left 12s linear infinite;
 }
 
 .skills-scroll-track:hover {
